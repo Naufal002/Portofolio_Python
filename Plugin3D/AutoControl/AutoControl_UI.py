@@ -17,26 +17,32 @@ class TransferVertex:
         cmds.columnLayout( adjustableColumn=True, columnAlign="center" )
         cmds.separator( style="in", height=15 )
         
-        cmds.text( label="Select joint" )
-        cmds.separator( style="none", height=3 )
-        cmds.rowLayout( numberOfColumns=2 )
-        cmds.textField( "Search_TF",width=150 )
-        cmds.button( width=100, label="Search", c = self.search_fnc)
-        cmds.setParent("..")
-        
+        # cmds.text( label="Select joint" )
+        # cmds.separator( style="none", height=3 )
+        # cmds.rowLayout( numberOfColumns=2 )
+        # cmds.textField( "Search_TF",width=150 )
+        # cmds.button( width=100, label="Search", c = self.search_fnc)
+        # cmds.setParent("..")
+
+        # Finall Button
         cmds.separator( style="none", height=5 )
         cmds.text( label="Add Controll" )
         cmds.separator( style="none", height=3 )
-        cmds.button( label="Finall Button",c = self.finall_fnc)
+        cmds.button( label="Finall Button", c = self.finall_fnc)
         
         cmds.showWindow()
 
 
-    def search_fnc(self):
-        '''SEARCH FUNCTION'''
-        sel = cmds.ls(sl = True, type = "joint")
-        for i in sel:
-            if
+    # def search_fnc(self,*args):
+    #     '''SEARCH FUNCTION'''
+    #     sel = cmds.ls(sl = True, type = "joint")
+    #     for i in sel:
+    #         x = i.split(".")[-1]
+    #         var_text = cmds.textField( "Search_TF",q = True, text =True)
+    #         if var_text == "":
+    #             cmds.textField( "Search_TF", q = True, text = x)
+    #         else:
+    #             cmds.textField( "Search_TF", q =True, text = var_text + ", " + x)
 
 
             
