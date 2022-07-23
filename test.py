@@ -1,13 +1,14 @@
-import os 
+import os  
 os.system('cls')
 
-# Input Alas
-alas = float(input("Masukkan Alas: "))
 
-# Input Tinggi
-tinggi = float(input("Masukkan tinggi: "))
+angka = int(20)
 
-# Count
-luas = (alas*tinggi)
-ct = 1/2 * luas
-print('Luas Segitiga adalah %0.2f' %ct)
+def fnc(ubah_angka):
+    global angka
+    angka = ubah_angka
+
+    return angka
+
+fnc(10)
+print(angka)
