@@ -1,14 +1,12 @@
-import os  
+import os 
 os.system('cls')
 
+variable = "Hadir"
+angka = 0
+while True:
+    print(f"{angka}. {variable}")
+    angka += 1
 
-angka = int(20)
-
-def fnc(ubah_angka):
-    global angka
-    angka = ubah_angka
-
-    return angka
-
-fnc(10)
-print(angka)
+    if angka == 3:
+        print("-AKHIR DARI PROGRAM- ")
+        break

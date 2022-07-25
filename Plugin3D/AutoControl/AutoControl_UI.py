@@ -56,16 +56,14 @@ class Auto_Control:
         nama_grp = "{0}_GROUP"
 
         var = cmds.textField( "Search_TF",q = True, text = True)
-        sel = cmds.ls(sl = True)
-        for i in sel:
-            qry_translate = cmds.xform( var, query=True, ws=True, t=True )
-            qry_rotate = cmds.xform( var, query=True, ws=True, ro=True )
-    
-            controls = cmds.circle( name="{0}_CONTROL".format(var), ch=False )[0]
+        qry_translate = cmds.xform( var, query=True, ws=True, t=True )
+        qry_rotate = cmds.xform( var, query=True, ws=True, ro=True )
+
+        for i in var:
+            controls = cmds.circle( name="{0}_CONTROL".format(i), ch=False )[0]
             groups = cmds.group(controls, name= nama_grp)
 
             cmds.xform( groups, ws=True, t=qry_translate, ro=qry_rotate )
-
             cmds.parent(controls, groups)
 
 
